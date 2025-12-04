@@ -126,6 +126,7 @@ O backend segue boas práticas de arquitetura em camadas:
 ```bash
 git clone https://github.com/keijizn/Moedas-Escolares.git
 cd Moedas-Escolares
+mvn spring-boot:run
 
 📁 Estrutura de Pastas
 Moedas-Escolares/
