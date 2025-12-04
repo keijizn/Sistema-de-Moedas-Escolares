@@ -29,11 +29,11 @@ Empresas podem criar benefícios como produtos, serviços e descontos.
 
 💸 Distribuição de Moedas
 
-Professores recebem moedas periódicas que podem distribuir conforme desempenho.
+Professores recebem moedas periódicas que podem distribuir conforme o desempenho dos alunos.
 
 ✉️ Notificações Automáticas por E-mail
 
-Via EmailJS, o sistema envia:
+Via EmailJS, o sistema envia notificações de:
 
 Recebimento de moedas
 
@@ -43,7 +43,7 @@ Redefinição de senha
 
 🎁 Resgate de Benefícios
 
-Alunos podem trocar moedas acumuladas por vantagens, recebendo um código de resgate via e-mail.
+Alunos podem trocar moedas acumuladas por vantagens e recebem um código de resgate via e-mail.
 
 🔐 Autenticação e Perfis
 
@@ -59,7 +59,7 @@ Com suporte a:
 
 Recuperação de senha via e-mail
 
-Geração de nova senha automática
+Geração automática de nova senha
 
 Validação segura com Spring Security
 
@@ -76,7 +76,21 @@ Backend – Spring Boot
 
 🐘 PostgreSQL
 
-📧 🏛️ Arquitetura do Sistema
+📧 EmailJS + JavaMailSender
+
+⚙️ Maven
+
+Frontend – HTML/CSS/JS
+
+🌐 HTML5
+
+🎨 CSS3 (Glassmorphism Azul-Turquesa)
+
+⚡ JavaScript
+
+🔌 Consumo de API via Fetch
+
+🏛️ Arquitetura do Sistema
 
 O projeto segue boas práticas de arquitetura em camadas:
 
@@ -84,13 +98,13 @@ Controller → Service → Repository → Domain(Model)
 
 Camadas
 
-Controller → Endpoints REST para login, cadastro, moedas, benefícios etc.
+Controller – Endpoints REST para login, cadastro, moedas, benefícios etc.
 
-Service → Regras de negócio (envio de email, reset de senha, distribuição de moedas).
+Service – Regras de negócio (envio de email, reset de senha, distribuição de moedas).
 
-Repository → Persistência via Spring Data JPA.
+Repository – Persistência via Spring Data JPA.
 
-Domain/Model → Entidades como:
+Domain/Model – Entidades do sistema, como:
 
 Aluno
 
@@ -102,19 +116,9 @@ Benefício
 
 Menu
 
-EventoEmailJS
+Evento
 
-⚙️ Maven
-
-Frontend – HTML/CSS/JS (Separado do backend)
-
-🌐 HTML5
-
-🎨 CSS3 (Glassmorphism Azul-Turquesa)
-
-⚡ JavaScript
-
-🔌 Consumo de API com Fetch
+Ledger
 
 ⚙️ Instalação e Execução
 ✔️ Pré-requisitos
@@ -135,11 +139,13 @@ git clone https://github.com/keijizn/Moedas-Escolares.git
 cd Moedas-Escolares
 
 ▶️ Executar o Backend (Spring Boot)
-
-No terminal:
-
 cd backend
 mvn spring-boot:run
+
+
+A API estará disponível em:
+
+👉 http://localhost:8080
 
 📁 Estrutura de Pastas do Projeto
 Moedas-Escolares/
@@ -151,7 +157,7 @@ Moedas-Escolares/
 │   │   ├── repo/               # Repositórios JPA
 │   │   ├── domain/             # Entidades
 │   │   ├── security/           # Autenticação
-│   │   └── dto/                # Dados de transporte
+│   │   └── dto/                # Objetos de transferência
 │   ├── src/main/resources/
 │   │   └── application.properties
 │   └── pom.xml
