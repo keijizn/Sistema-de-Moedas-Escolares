@@ -1,4 +1,4 @@
-💰 Moedas Escolares – Sistema de Moeda Estudantil
+##💰 Moedas Escolares – Sistema de Moeda Estudantil
 
 O Sistema de Moeda Estudantil – Moedas Escolares foi criado para valorizar o desempenho dos estudantes, tornando o reconhecimento do mérito algo visível, moderno e recompensador.
 
